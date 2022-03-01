@@ -171,7 +171,7 @@ gdcVolcanoPlot <- function(deg.all, fc=2, pval=0.01) {
     
     volcano <- ggplot(data=geneList, aes(x=logFC, 
         y = -log10(FDR)))
-    volcano+geom_point(aes(color=geneList$threshold), alpha=1, size=0.8) + 
+    volcano+geom_point(aes(color=threshold), alpha=1, size=0.8) + 
         xlab("log2(Fold Change)") + ylab("-log10(FDR)") +
         scale_colour_manual(
             values = c('red','black','green3')) + xlim(c(-lim,lim)) +
