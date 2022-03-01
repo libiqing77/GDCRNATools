@@ -55,7 +55,7 @@ gdcCorPlot <- function(gene1, gene2, rna.expr, metadata) {
     ypos <- as.numeric(summary(pcDa)[6])+0.5
     
     
-    ggplot(corDa, aes(x=corDa$lncDa, y=corDa$pcDa)) + 
+    ggplot(corDa, aes(x=lncDa, y=pcDa)) + 
         geom_point(aes(shape=sampleType, color=sampleType)) + 
         xlab(paste(gene1,' (',ensembl2symbolFun(gene1),')',sep='')) +
         ylab(paste(gene2,' (',ensembl2symbolFun(gene2),')',sep='')) + 
