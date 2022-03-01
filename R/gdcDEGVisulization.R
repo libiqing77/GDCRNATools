@@ -95,7 +95,7 @@ gdcBarPlot <- function(deg, angle=0, data.type) {
                 each=length(gr)), levels=c('Up-regulated','Down-regulated')))
         
         if (angle==0) {
-            ggplot(data=d, aes(x=d$geneClass, y=d$geneNums, 
+            ggplot(data=d, aes(x=geneClass, y=geneNums, 
                 fill=Regulation)) + geom_bar(stat = 'identity') + 
                 scale_x_discrete(limits=d$geneClass[seq_len(nrow(d)/2)]) + 
                 scale_fill_discrete(name = "") +
@@ -110,7 +110,7 @@ gdcBarPlot <- function(deg, angle=0, data.type) {
                     axis.text.x = element_text(angle = angle,size=14),
                     axis.text.y=element_text(size=14))
         } else {
-            ggplot(data=d, aes(x=d$geneClass, y=d$geneNums, 
+            ggplot(data=d, aes(x=geneClass, y=geneNums, 
                 fill=Regulation)) + geom_bar(stat = 'identity') + 
                 scale_x_discrete(limits=d$geneClass[seq_len(nrow(d)/2)]) + 
                 scale_fill_discrete(name = "") +
