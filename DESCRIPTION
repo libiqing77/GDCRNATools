@@ -1,0 +1,47 @@
+Package: GDCRNATools
+Title: GDCRNATools: an R/Bioconductor package for integrative analysis
+        of lncRNA, mRNA, and miRNA data in GDC
+Version: 1.6.0
+Author: Ruidong Li,
+	Han Qu,
+	Shibo Wang,
+	Julong Wei,
+	Le Zhang,
+	Renyuan Ma,
+	Jianming Lu,
+	Jianguo Zhu,
+	Wei-De Zhong,
+	Zhenyu Jia
+Maintainer: Ruidong Li <rli012@ucr.edu>,
+ Han Qu <hqu002@ucr.edu>
+Description: This is an easy-to-use package for downloading, organizing, and integrative analyzing RNA expression 
+	data in GDC with an emphasis on deciphering the lncRNA-mRNA related ceRNA regulatory network in cancer. 
+	Three databases of lncRNA-miRNA interactions including spongeScan, starBase, and miRcode, as well as three 
+	databases of mRNA-miRNA interactions including miRTarBase, starBase, and miRcode are incorporated into the 
+	package for ceRNAs network construction. limma, edgeR, and DESeq2 can be used to identify differentially 
+	expressed genes/miRNAs. Functional enrichment analyses including GO, KEGG, and DO can be performed based on 
+	the clusterProfiler and DO packages. Both univariate CoxPH and KM survival analyses of multiple genes can be 
+	implemented in the package. Besides some routine visualization functions such as volcano plot, bar plot, and 
+	KM plot, a few simply shiny apps are developed to facilitate visualization of results on a local webpage.
+Depends: R (>= 3.5.0)
+License: Artistic-2.0
+Encoding: UTF-8
+LazyData: false
+Imports: shiny, jsonlite, rjson, XML, limma, edgeR, DESeq2,
+        clusterProfiler, DOSE, org.Hs.eg.db, biomaRt, survival,
+        survminer, pathview, ggplot2, gplots, DT, GenomicDataCommons,
+        BiocParallel
+Suggests: knitr, testthat
+VignetteBuilder: knitr
+biocViews: ImmunoOncology, GeneExpression, DifferentialExpression,
+        GeneRegulation, GeneTarget, NetworkInference, Survival,
+        Visualization, GeneSetEnrichment, NetworkEnrichment, Network,
+        RNASeq, GO, KEGG
+RoxygenNote: 6.1.0
+Packaged: 2019-10-30 02:53:53 UTC; biocbuild
+git_url: https://git.bioconductor.org/packages/GDCRNATools
+git_branch: RELEASE_3_10
+git_last_commit: 0e1363a
+git_last_commit_date: 2019-10-29
+Date/Publication: 2019-10-29
+NeedsCompilation: no
