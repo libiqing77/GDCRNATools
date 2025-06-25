@@ -65,7 +65,7 @@ gdcSurvivalAnalysis <- function(gene, rna.expr, metadata,
 ###
 coxphTestFun <- function(genes, rna.expr, metaMatrix) {
 
-    metaMatrix <- metaMatrix[metaMatrix$sample_type=='PrimaryTumor',]
+    metaMatrix <- metaMatrix[metaMatrix$sample_type=='Tumor',]
     
     samples = intersect(colnames(rna.expr), metaMatrix$sample)
     exprDa=rna.expr[genes,samples]
@@ -105,7 +105,7 @@ coxphTestFun <- function(genes, rna.expr, metaMatrix) {
 
 ###
 kmTestFun <- function(genes, rna.expr, metaMatrix, sep='median') {
-    metaMatrix <- metaMatrix[metaMatrix$sample_type=='PrimaryTumor',]
+    metaMatrix <- metaMatrix[metaMatrix$sample_type=='Tumor',]
     
     samples = intersect(colnames(rna.expr), metaMatrix$sample)
     exprDa=rna.expr[genes,samples]
