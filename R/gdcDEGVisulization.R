@@ -231,7 +231,7 @@ gdcHeatmap <- function(deg.id, metadata, rna.expr) {
 
     degDa <- rna.expr[deg.id,]
     
-    sampleCol <- ifelse(metadata$sample_type=='SolidTissueNormal', 
+    sampleCol <- ifelse(metadata$sample_type=='Normal', 
         'blue', 'red')
     #col=colorpanel(75,"darkblue","white","orangered")
     lmat = rbind(c(4,3),c(2,1))
