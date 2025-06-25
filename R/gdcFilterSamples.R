@@ -32,7 +32,7 @@ gdcFilterDuplicate <- function(metadata) {
 ##' metaMatrix <- gdcFilterSampleType(metadata=metaMatrix)
 gdcFilterSampleType <- function(metadata) {
     filter <- which(! metadata$sample_type %in% 
-        c('PrimaryTumor', 'SolidTissueNormal'))
+        c('Tumor', 'Normal'))
     if (length(filter) != 0) {
         metadata <- metadata[-filter,]
     }
